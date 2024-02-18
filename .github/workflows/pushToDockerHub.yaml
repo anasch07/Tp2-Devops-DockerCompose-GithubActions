@@ -6,6 +6,15 @@ on:
       - main  
 
 jobs:
+
+  echoSecrets:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Echo secrets
+      run: |
+        echo ${{ secrets.DOCKERHUB_USERNAME }}
+        echo ${{ secrets.DOCKERHUB_TOKEN }}
+
   build:
     runs-on: ubuntu-latest
 
@@ -18,9 +27,6 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    
-    - name: echo secrets
-      run: echo ${{ secrets.DOCKERHUB_USERNAME }} ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
