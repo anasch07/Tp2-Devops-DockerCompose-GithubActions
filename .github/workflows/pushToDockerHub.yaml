@@ -28,6 +28,7 @@ jobs:
         context: ./server
         push: true
         tags: anasch07/tp2-devops-docker-compose-github-actions-mern-crud-api:latest
+        platform: linux/amd64
 
     - name: Build and push Web Docker image
       uses: docker/build-push-action@v5
@@ -35,3 +36,4 @@ jobs:
         context: ./client
         push: true
         tags: anasch07/tp2-devops-docker-compose-github-actions-mern-crud-web:latest
+        platform: linux/amd64
