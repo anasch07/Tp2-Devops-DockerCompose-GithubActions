@@ -25,8 +25,8 @@ jobs:
       uses: docker/setup-buildx-action@v3
 
     - name: Build Image multi arch
-      run: docker buildx build --platform linux/arm64,linux/amd64, -t anasch07/tp2-devops-docker-compose-github-actions-mern-crud-api:latest --push ./server
-     
+      run: docker buildx build --platform linux/arm64,linux/amd64 -t anasch07/tp2-devops-docker-compose-github-actions-mern-crud-api:latest --push ./server
+       
 
     # - name: Build and push API Docker image
     #   uses: docker/build-push-action@v5
