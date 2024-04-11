@@ -3,7 +3,7 @@
 This project is a MERN (MongoDB, Express.js, React.js, Node.js) stack application for managing users (Create, Read, Update, Delete operations). The project is containerized using Docker, orchestrated using Docker Compose, and automated using GitHub Actions.
 
 ## Project Structure
-
+ 
 The project consists of two main parts:
 
 1. **Client**: A React.js application for the frontend.
